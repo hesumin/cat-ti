@@ -49,31 +49,6 @@
     }
 
     /* 像素猫咪图阵 */
-    .cat-grid {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 4px;
-      margin-bottom: 32px;
-    }
-
-    .cat-pixel {
-      aspect-ratio: 1;
-      background: #f5f5f5;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 42px;
-      /* 像素感动画 */
-      animation: float 3s ease-in-out infinite;
-    }
-
-    .cat-pixel:nth-child(2n) { animation-delay: 0.3s; }
-    .cat-pixel:nth-child(3n) { animation-delay: 0.6s; }
-    .cat-pixel:nth-child(4n) { animation-delay: 0.9s; }
-    .cat-pixel:nth-child(5n) { animation-delay: 1.2s; }
-
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-4px); }
@@ -427,20 +402,7 @@
   <div id="start-page">
     <div class="pixel-title">CATTI</div>
 
-    <div class="cat-grid">
-      <div class="cat-pixel">🐱</div>
-      <div class="cat-pixel">🐈</div>
-      <div class="cat-pixel">😸</div>
-      <div class="cat-pixel">🐈‍⬛</div>
-      <div class="cat-pixel">😺</div>
-      <div class="cat-pixel">🐱</div>
-      <div class="cat-pixel">😻</div>
-      <div class="cat-pixel">🐈</div>
-      <div class="cat-pixel">😽</div>
-      <div class="cat-pixel">🐈‍⬛</div>
-      <div class="cat-pixel">😸</div>
-      <div class="cat-pixel">😺</div>
-    </div>
+    <img src="banner.jpg" alt="sumin banner" style="width:100%;border-radius:16px;margin-bottom:20px;object-fit:cover;max-height:240px;">
 
     <div class="main-slogan">重生之我变成了一只猫</div>
     <div class="sub-slogan">这一次，我要活出自己的猫生</div>
@@ -450,7 +412,7 @@
       开 始 测 试
     </button>
 
-    <div class="footer-note">来小红书找我玩 <span>@禾苏</span> · DogTI也来啦🐶</div>
+    <div class="footer-note">来小红书找我玩 <span>@sumin</span> · DogTI也来啦🐶</div>
   </div>
 
   <!-- ===== 题目页 ===== -->
