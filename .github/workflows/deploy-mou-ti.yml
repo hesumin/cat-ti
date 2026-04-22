@@ -1,0 +1,31 @@
+name: Deploy MouTI to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "mou-ti/**"
+      - ".github/workflows/deploy-mou-ti.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy MouTI
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mou-ti
+          directory: ./mou-ti
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
