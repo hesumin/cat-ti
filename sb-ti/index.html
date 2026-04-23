@@ -455,7 +455,7 @@ const questions = [
         options:[
             {label:"嗯！老板说得有道理！", effect:{attitude:2}},
             {label:"面带微笑，心里已经骂了三遍", effect:{attitude:0}},
-            {label："又来了，上次那个饼还没消化完", effect:{attitude:-2}}
+            {label:"又来了，上次那个饼还没消化完", effect:{attitude:-2}}
         ]
     },
     {
@@ -518,7 +518,7 @@ const questions = [
         options:[
             {label:"反复思考三遍后感觉应该选 A？", effect:{action:-2}},
             {label:"啊，要不选 B 吧？", effect:{action:0}},
-            {label："不会就选 C，这是常识", effect:{action:2}}
+            {label:"不会就选 C，这是常识", effect:{action:2}}
         ]
     },
     {
@@ -526,7 +526,7 @@ const questions = [
         text: "周一早上醒来想到要上班，你通常的状态是：",
         options:[
             {label:"起床！新的一周充满了可能性！", effect:{work:2}},
-            {label："再赖五分钟床……好了十分钟过去了", effect:{work:0}},
+            {label:"再赖五分钟床……好了十分钟过去了", effect:{work:0}},
             {label:"开始在心里盘算请病假的理由", effect:{work:-2}}
         ]
     },
@@ -610,13 +610,7 @@ const profiles = {
         tags: ["心如止水","不被定义","情绪稳定器"], love: "你的淡然让人安心，但对方有时也会疑惑你是否真的在乎。",
         tips: ["佛系不等于无所谓，找到你真正在意的东西", "适度的激情会让生活更鲜活", "你的平静是可以感染别人的超能力"]
     },
-    "LLL M".trim(): { // edge case handled in compute
-    },
-    "WM SM".replace(" ",""): {
-    },
 };
-
-// Complete profile map - rebuild cleanly
 const profileMap = {
     "WWSS": { code: "CTRL", breed: "控制狂魔", role: "一切尽在掌握的操盘手", emoji: "🎮", summary: "你不是在打工，你是在运营自己。KPI是你的游戏进度条，同事是你的NPC，老板是系统管理员。一切尽在掌控的感觉让你上瘾。", tags: ["掌控欲强","结果导向","冷静理性"], love: "在感情里你习惯主导节奏，但偶尔也要让对方当一次队长。", tips: ["学会放手——不是所有事情都需要你来把控","下属不是工具人，给他们成长空间","休息也是一种战略投资"] },
     "WWSM": { code: "BOSS", breed: "伪老板", role: "还没当上老板但已经有老板病", emoji: "👔", summary: "明明还是打工人，但你的气场已经溢出了屏幕。开会最爱发言，PPT必须精美，口头禅是'我觉得我们应该从战略层面考虑这个问题'。", tags: ["气场两米八","爱画大饼","管理欲过剩"], love: "对方可能会觉得你有点强势，但你其实只是想给对方最好的安排。", tips: ["先把自己活明白再去指点江山","少说'我觉得'，多问'你们觉得'","真正的领导力不需要靠音量证明"] },
