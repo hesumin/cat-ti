@@ -13,7 +13,13 @@ NBTI/
 │  └─ index.html
 ├─ dog-ti/
 │  └─ index.html
-└─ index.html
+├─ index.html
+└─ .github/workflows/
+   ├─ deploy-nbti.yml
+   ├─ deploy-cat-ti.yml
+   ├─ deploy-mou-ti.yml
+   └─ deploy-dog-ti.yml
+
 ```
 
 
@@ -28,18 +34,23 @@ NBTI/
 
 ## 已落地的自动部署方式
 
-仓库内已经增加三个工作流：
+仓库内已经增加四个工作流：
 
+- `.github/workflows/deploy-nbti.yml`
 - `.github/workflows/deploy-cat-ti.yml`
 - `.github/workflows/deploy-mou-ti.yml`
 - `.github/workflows/deploy-dog-ti.yml`
 
 触发逻辑：
 
+- 修改根目录 `index.html` 或任一动物子目录并推送到 `main` → 自动部署 NBTI 根站到 `nb-ti`
+
+
 - 修改 `cat-ti/**` 并推送到 `main` → 自动部署 `cat-ti`
 - 修改 `mou-ti/**` 并推送到 `main` → 自动部署 `mou-ti`
 - 修改 `dog-ti/**` 并推送到 `main` → 自动部署 `dog-ti`
 - 也支持在 GitHub Actions 页面手动触发
+
 
 
 ## GitHub 需要补的 Secrets
@@ -55,6 +66,14 @@ NBTI/
 - `CLOUDFLARE_ACCOUNT_ID` 填你的 Cloudflare 账户 ID
 
 ## Cloudflare Pages 对应项目名
+
+### NBTI
+- Project name: `nb-ti`
+- Deploy directory: `.`
+- Branch: `main`
+- 首次运行会在 GitHub Actions 中自动检查并创建 `nb-ti` 的 Cloudflare Pages 项目
+
+
 
 ### CatTI
 - Project name: `cat-ti`
@@ -72,10 +91,12 @@ NBTI/
 - Branch: `main`
 - 首次运行会在 GitHub Actions 中自动尝试创建 `dog-ti` 的 Cloudflare Pages 项目
 
+
 ## 页面入口
 
+- NBTI 入口页: `index.html`
 - CatTI: `cat-ti/index.html`
 - MouTI: `mou-ti/index.html`
 - DogTI: `dog-ti/index.html`
-- 根目录导航页: `index.html`
+
 
