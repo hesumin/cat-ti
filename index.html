@@ -576,25 +576,151 @@
       text-underline-offset: 2px;
     }
 
-    @keyframes driftLeft {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
+    @media (max-width: 430px) {
+      .app {
+        width: min(100%, 392px);
+        padding: 14px 10px 28px;
+      }
 
-    @keyframes driftRight {
-      from { transform: translateX(-50%); }
-      to { transform: translateX(0); }
-    }
+      .panel {
+        border-radius: 24px;
+      }
 
-    @keyframes cardBob {
-      0%, 100% { transform: translateY(var(--stack-y, 0px)) rotate(var(--tilt, 0deg)); }
-      50% { transform: translateY(calc(var(--stack-y, 0px) - 5px)) rotate(var(--tilt-alt, 0.4deg)); }
-    }
+      .hero {
+        padding: 12px 12px 16px;
+      }
 
-    @keyframes logoBounce {
-      0%, 100% { transform: translateY(0) rotateX(0); }
-      10% { transform: translateY(-4px) rotateX(-10deg); }
-      22% { transform: translateY(0) rotateX(0); }
+      .logo {
+        gap: 6px;
+        margin: 2px 0 14px;
+        font-size: clamp(34px, 10vw, 50px);
+      }
+
+      .logo span {
+        padding: 7px 5px 4px;
+        box-shadow: 6px 6px 0 rgba(179, 149, 142, 0.52);
+      }
+
+      .marquee-wall {
+        margin: 8px 0 16px;
+        padding: 4px 0;
+      }
+
+      .marquee-row {
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .mini-card {
+        flex: 0 0 82px;
+        min-height: 86px;
+        border-radius: 20px;
+        padding: 8px 7px 9px;
+        gap: 6px;
+      }
+
+      .mini-photo {
+        width: 54px;
+        height: 48px;
+        border-radius: 16px;
+        font-size: 26px;
+      }
+
+      .mini-name {
+        font-size: 10px;
+      }
+
+      .hero-title {
+        font-size: clamp(24px, 7vw, 34px);
+        line-height: 1.14;
+      }
+
+      .hero-subtitle {
+        margin-top: 10px;
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .hero-meta {
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .hero-chip {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+
+      .hero-actions {
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .btn,
+      .project-btn {
+        min-height: 52px;
+        padding: 12px 16px;
+        border-radius: 16px;
+        font-size: 14px;
+      }
+
+      .section {
+        margin-top: 14px;
+        padding: 18px 12px;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
+
+      .section-desc,
+      .why-copy,
+      .path-copy {
+        font-size: 13px;
+        line-height: 1.68;
+      }
+
+      .project-grid,
+      .why-grid,
+      .path-grid {
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .project-card {
+        border-radius: 20px;
+        padding: 16px 14px;
+      }
+
+      .project-name {
+        font-size: 24px;
+      }
+
+      .project-copy {
+        font-size: 13px;
+        line-height: 1.68;
+      }
+
+      .floating-bar {
+        bottom: 10px;
+        gap: 6px;
+        margin-top: 14px;
+        padding: 10px;
+        border-radius: 18px;
+      }
+
+      .floating-link {
+        min-height: 44px;
+        border-radius: 14px;
+        font-size: 11px;
+      }
+
+      .bottom-note {
+        margin-top: 14px;
+        font-size: 11px;
+        line-height: 1.7;
+      }
     }
 
     @media (min-width: 760px) {
@@ -674,7 +800,7 @@
       </div>
 
       <h1 class="hero-title"><span class="highlight">MBTI 测腻了，NBTI 来了。</span></h1>
-      <p class="hero-subtitle">先别做人类了，这次直接选本体。猫系、狗系、牛系、社畜、饮品五条支线都能单独开测，挑一个最像你现在状态的，测完顺手去认领你的人格。</p>
+      <p class="hero-subtitle">先别做人类了，直接选本体。猫系、狗系、牛系、社畜、饮品五条支线都能单独开测，选一个最像你的，测完顺手去认领人格。</p>
 
       <div class="hero-meta">
         <div class="hero-chip">5 条人格支线</div>
@@ -693,7 +819,7 @@
 
     <section id="species" class="section panel">
       <h2 class="section-title">刷到这里，先认领你的动物人格</h2>
-      <p class="section-desc">现在五条支线都能直接开测：有情境题、人格结果、图鉴页，也有适合拿去发朋友圈和小红书的分享感。别纠结，先选最像你的那一只。</p>
+      <p class="section-desc">五条支线都能直接开测：有情境题、人格结果、图鉴页，也有适合发朋友圈和小红书的分享感。别纠结，先选最像你的那一只。</p>
 
 
       <div class="project-grid">
@@ -796,7 +922,7 @@
 
     <section class="section panel">
       <h2 class="section-title">为什么大家会想玩 NBTI？</h2>
-      <p class="section-desc">因为有时候，MBTI 已经解释不了一个人的气质了。有人一看就很猫，有人浑身都是狗感，还有人光站在那里就自带牛马文学。</p>
+      <p class="section-desc">有时候，MBTI 已经解释不了一个人的气质了。有人一看就很猫，有人浑身都是狗感，也有人自带牛马文学或微醺感。</p>
 
       <div class="why-grid">
         <article class="why-card">
@@ -806,13 +932,13 @@
         </article>
         <article class="why-card">
           <div class="why-index">02</div>
-          <h3 class="why-title">三条支线，三种完全不同的气质</h3>
-          <p class="why-copy">猫系偏冷感、狗系偏热烈、牛系偏抽象打工人、社畜系偏暴躁玩梗。就算是同一个人，换一条线玩也会有完全不一样的代入体验。</p>
+          <h3 class="why-title">五条支线，五种完全不同的气质</h3>
+          <p class="why-copy">猫系偏冷感、狗系偏热烈、牛系偏稳场、社畜系偏玩梗、饮品系偏风味代入。同一个人，换条线玩也会是不一样的体验。</p>
         </article>
         <article class="why-card">
           <div class="why-index">03</div>
           <h3 class="why-title">测完特别适合拉朋友一起玩</h3>
-          <p class="why-copy">最上头的不是只看自己测成什么，而是顺手把链接甩给朋友：来，看看你到底是猫、狗还是牛。</p>
+          <p class="why-copy">最好玩的不只是看自己测成什么，而是顺手把链接甩给朋友：来，看看你到底像哪一只、哪一杯。</p>
         </article>
       </div>
     </section>
@@ -826,17 +952,17 @@
         <article class="path-card">
           <div class="path-index">A</div>
           <h3 class="path-title">先凭第一直觉选阵营</h3>
-          <p class="path-copy">猫系、狗系、牛系，不用分析太多。你现在最像哪一种，就先点进去，那通常比理性判断更准。</p>
+          <p class="path-copy">猫系、狗系、牛系、社畜、饮品，不用分析太多。你现在最像哪一种，就先点进去，第一直觉通常更准。</p>
         </article>
         <article class="path-card">
           <div class="path-index">B</div>
           <h3 class="path-title">答完题，去认领结果</h3>
-          <p class="path-copy">每条支线都会给你一个很具体的动物人格结果，不只是“像”，而是会告诉你到底像哪一种。</p>
+          <p class="path-copy">每条支线都会给你一个很具体的人格结果，不只是“像”，而是会告诉你到底更接近哪一种本体。</p>
         </article>
         <article class="path-card">
           <div class="path-index">C</div>
           <h3 class="path-title">把链接甩给朋友互测</h3>
-          <p class="path-copy">最好玩的环节永远是互相指定本体：你测完自己，再去抓朋友、对象、同事一起来认领动物人格。</p>
+          <p class="path-copy">最好玩的环节永远是互相指定本体：你测完自己，再去抓朋友、对象、同事一起来认领。</p>
         </article>
       </div>
 
